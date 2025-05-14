@@ -1,4 +1,4 @@
-// Bar Chart
+
 const barCtx = document.getElementById('barChart').getContext('2d');
 const barChart = new Chart(barCtx, {
   type: 'bar',
@@ -22,7 +22,7 @@ const barChart = new Chart(barCtx, {
   }
 });
 
-// Line Chart (Dynamic)
+
 const lineCtx = document.getElementById('lineChart').getContext('2d');
 const lineChart = new Chart(lineCtx, {
   type: 'line',
@@ -40,7 +40,7 @@ const lineChart = new Chart(lineCtx, {
   }
 });
 
-// Update Chart Data
+
 document.getElementById('updateData').addEventListener('click', () => {
   lineChart.data.datasets[0].data = Array.from({ length: 6 }, () => Math.floor(Math.random() * 100));
   lineChart.update();
